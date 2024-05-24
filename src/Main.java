@@ -14,6 +14,11 @@ public class Main {
         GerenciadorNutricionistas.adicionar(nutricionista1);
         GerenciadorNutricionistas.adicionar(nutricionista2);
 
+        Consulta consulta1 = new Consulta(nutricionista1, "Paciente 1", LocalDateTime.now(), false);
+        Consulta consulta2 = new Consulta(nutricionista2, "Paciente 2", LocalDateTime.now().plusDays(1), false);
+        GerenciadorConsultas.adicionar(consulta1);
+        GerenciadorConsultas.adicionar(consulta2);
+
         while (true) {
             System.out.println("\n1 - Cadastrar um novo paciente");
             System.out.println("2 - Listar todos os pacientes");
